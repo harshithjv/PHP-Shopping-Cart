@@ -1,0 +1,28 @@
+This is demo site based on PHP to implement Shopping Cart.
+
+How to use:
+After installing LAMP or WAMP package:
+
+1. Open hosts file:
+
+(On windows)
+%SystemRoot%\system32\drivers\etc\hosts
+
+(On linux)
+/etc/hosts
+
+and add following line:
+127.0.0.3	php-sc
+
+2. Add virtual host in:
+httpd-vhosts.conf(windows) or /etc/apache2/sites-available/default (linux)
+
+these lines:
+NameVirtualHost 127.0.0.3
+
+<VirtualHost 127.0.0.3>
+DocumentRoot /home/pixelcode01/Sites/PHP-Shopping-Cart
+ServerName php-sc
+</VirtualHost>
+
+and then restart apache server and test this website in any browser by thew url:- http://php-sc/
