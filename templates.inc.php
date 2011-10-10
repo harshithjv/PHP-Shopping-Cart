@@ -23,7 +23,9 @@ function printHtmlBottom(){
 function printDefaultStyles(){
 ?>
     <style type="text/css">
-    body{background-color: #736F6E;}
+    body{
+	background-color: #736F6E;
+    }
     #container{width:960px;margin: 0 auto;border: 1px solid #000000;}
     #header {width: 100%;border: 1px solid #000000;}
     #header_left {width: 40%;float: left;border: 1px solid #000000;min-height: 100px;}
@@ -33,22 +35,28 @@ function printDefaultStyles(){
     #footer{width: 100%;min-height:150px ;border: 1px solid #000000;}
     .clear {clear: both;}
     ul#menu{min-height:15px; margin: 0;padding: 0;margin-top: 5px;} 
-    ul#menu li{ list-style-type: none;padding: 0 20px;float: left;width: 65px; background: url(images/home_bt.gif) no-repeat;}
+    ul#menu li{ list-style-type: none;padding: 0 20px;float: left;min-width: 65px; background: url(images/home_bt.gif) no-repeat;}
+    ul#menu li a{ color: #000000; text-decoration: none;}
+    ul#menu li a:hover{ color: #000000; text-decoration: underline;}
+    ul#menu li a:visited{ color: #000000; text-decoration: none;}
     #login {float: right;width:250px;padding-right: 5px;}
     #login-box .left {width: 40%; float: left;}
     #login-box .text-box {width: 50%; float: right; background: url(); }
+    .clear{
+        clear: both;
+    }
     </style>
 <?php
 }
 
 function printLoginBox(){
 ?>
-<form id="login" action="" method="get">
+<form id="login" action="." method="get">
 <div id="login-box"> 
 <span class="left" >User name</span> <input type="text" id="username" class="text-box" name="username"/><br />
 <span class="left">Password </span><input type="password" id="password" class="text-box" name="password"/><br />
 <input type="submit" value="Login"/>
-<a href="reg.php">Register</a>
+<a href="registration.php">Register</a>
 </div>
 </form>
 <?php
@@ -73,10 +81,10 @@ function printContainerTop($display_login_form){
 
 <div id="menu_box">
 <ul id="menu">
-<li>Home</li>
-<li>Products</li>
-<li>Order</li>
-<li>About Us</li>
+<li><a href="index.php">Home</a></li>
+<li><a href="products.php">Products</a></li>
+<li><a href="shopping-cart.php">Shopping Cart</a></li>
+<li><a href="about-us">About Us</a></li>
 </ul>
 </div>
 

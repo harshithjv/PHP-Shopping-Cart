@@ -14,15 +14,24 @@ After installing LAMP or WAMP package:
 and add following line:
 127.0.0.3	php-sc
 
-2. Add virtual host in:
-httpd-vhosts.conf(windows) or /etc/apache2/sites-available/default (linux)
+2. Add virtual host specification in file:
+(On Windows)
+C:\\path\to\<apache_dir>\httpd-vhosts.conf
+
+E.g. path for WAMPServer:
+C:\wamp\bin\apache\Apache2.2.11\conf\extra\httpd-vhosts.conf 
+
+or
+
+(On Linux/Ubuntu)
+/etc/apache2/sites-available/default 
 
 these lines:
 NameVirtualHost 127.0.0.3
 
 <VirtualHost 127.0.0.3>
-DocumentRoot /home/pixelcode01/Sites/PHP-Shopping-Cart
+DocumentRoot /path/to/PHP-Shopping-Cart
 ServerName php-sc
 </VirtualHost>
 
-and then restart apache server and test this website in any browser by thew url:- http://php-sc/
+3. Restart apache server and test this website in any browser by using the url:- http://php-sc/
