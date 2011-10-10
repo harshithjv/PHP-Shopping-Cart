@@ -40,7 +40,7 @@ CREATE TABLE `item` (
 
 LOCK TABLES `item` WRITE;
 /*!40000 ALTER TABLE `item` DISABLE KEYS */;
-INSERT INTO `item` VALUES (1,'The Greatness Guide by Robin Sharma','',195,9,1,'2011-10-10 11:46:37'),(3,'The Monk Who Sold His Ferrari by Robin Sharma','',195,7,1,'2011-10-10 11:51:42'),(4,'Connect The Dots by Rashmi Bansal','',125,5,1,'2011-10-10 11:52:44'),(7,'Stay Hungry Stay Foolish by Rashmi Bansal','',125,0,1,'2011-10-10 11:53:50'),(8,'The Zahir by Paulo Coelho','',299,1,1,'2011-10-10 11:54:34');
+INSERT INTO `item` VALUES (1,'The Greatness Guide by Robin Sharma','',195,9,1,'2011-10-10 11:46:37'),(3,'The Monk Who Sold His Ferrari by Robin Sharma','',195,6,1,'2011-10-10 11:51:42'),(4,'Connect The Dots by Rashmi Bansal','',125,5,1,'2011-10-10 11:52:44'),(7,'Stay Hungry Stay Foolish by Rashmi Bansal','',125,0,1,'2011-10-10 11:53:50'),(8,'The Zahir by Paulo Coelho','',299,1,1,'2011-10-10 11:54:34');
 /*!40000 ALTER TABLE `item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -64,7 +64,7 @@ CREATE TABLE `purchase_order` (
   KEY `purchase_order_fk_item` (`item`),
   CONSTRAINT `purchase_order_fk_item` FOREIGN KEY (`item`) REFERENCES `item` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `purchase_order_fk_user` FOREIGN KEY (`user`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,7 +73,7 @@ CREATE TABLE `purchase_order` (
 
 LOCK TABLES `purchase_order` WRITE;
 /*!40000 ALTER TABLE `purchase_order` DISABLE KEYS */;
-INSERT INTO `purchase_order` VALUES (51,1,4,1,125,1,'2011-10-10 12:49:17'),(52,1,8,1,299,1,'2011-10-10 12:49:24'),(53,1,8,1,299,1,'2011-10-10 12:49:41'),(54,1,4,1,125,1,'2011-10-10 12:50:59'),(55,1,4,1,125,1,'2011-10-10 12:51:29'),(56,1,4,1,125,1,'2011-10-10 12:51:49'),(57,1,4,1,125,1,'2011-10-10 12:52:20'),(58,1,4,1,125,1,'2011-10-10 12:52:24'),(59,1,3,1,195,1,'2011-10-10 12:52:37'),(60,1,3,1,195,1,'2011-10-10 12:52:41'),(61,1,8,1,299,1,'2011-10-10 12:53:02');
+INSERT INTO `purchase_order` VALUES (51,1,4,1,125,1,'2011-10-10 12:49:17'),(52,1,8,1,299,1,'2011-10-10 12:49:24'),(53,1,8,1,299,1,'2011-10-10 12:49:41'),(54,1,4,1,125,1,'2011-10-10 12:50:59'),(55,1,4,1,125,1,'2011-10-10 12:51:29'),(56,1,4,1,125,1,'2011-10-10 12:51:49'),(57,1,4,1,125,1,'2011-10-10 12:52:20'),(58,1,4,1,125,1,'2011-10-10 12:52:24'),(59,1,3,1,195,1,'2011-10-10 12:52:37'),(60,1,3,1,195,1,'2011-10-10 12:52:41'),(61,1,8,1,299,1,'2011-10-10 12:53:02'),(62,1,7,1,125,1,'2011-10-10 14:27:56'),(63,1,3,1,195,1,'2011-10-10 14:28:03');
 /*!40000 ALTER TABLE `purchase_order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -101,7 +101,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'dsdf','sdfsdf','m','sdfdsf','dsfsdfsd');
+INSERT INTO `user` VALUES (1,'admin','admin','m','sdfdsf','dsfsdfsd');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -114,4 +114,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-10-10 18:53:58
+-- Dump completed on 2011-10-10 20:06:03
