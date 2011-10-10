@@ -5,6 +5,12 @@
 
     printDefaultStyles();
 ?>
+<script type="text/javascript">
+    $(document).ready(function(){
+        <?php displayjQuerySetRedirect(); ?>
+       //jquery code here ... 
+    });
+</script>
 </head>
 
 <body>

@@ -10,6 +10,12 @@
         Page style over here ....
     */
 </style>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+       //jquery code here ... 
+    });
+</script>
 </head>
 
 <body>
